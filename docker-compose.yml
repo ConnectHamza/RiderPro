@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  web:
+    container_name: riderpro-website
+    image: registry.crowngroup.cluster/riderpro/website:prd
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        BUILD_ENV: production
+    environment:
+      NODE_ENV: production
+      NODE_PORT: 3000
+    ports:
+      - '3000:3000'

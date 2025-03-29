@@ -1,21 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+  }
+
+  body{
+    overflow-x: hidden !important;
+    width: 100%;
+  }
+
+  ::-webkit-scrollbar {
+    width: 12px; 
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+::-webkit-scrollbar-track {
+    background: #E2E6FD;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #6250DA; 
+    border-radius: 10px; 
+    
+}
+  
+  body {
+    font-family: Inter;
+    overflow-x: hidden !important;
+
+  }
+
+  .no-footer .footer{
+    display: none !important;
+  }
+
+  
+  p{
+    font-size: 15px;
+  }
+
+  ul{
+    font-size: 15px;
+  }
+
+  li{
+    font-size: 15px;
+  }
+
+  .heading1{
+    font-size: 60px;
+    line-height: 60px;
+    font-weight: bold;  
+  }
+  
+  .heading2{
+    font-size: 52px;
+    line-height: 60px;
+    font-weight: bold;  
+  }
+  
+  .heading3{
+    font-size: 44px;
+    line-height: 52px;
+    font-weight: bold;  
+  }
+  
+  .heading4{
+    font-size: 40px;
+    font-weight: bold;  
+  }
+
+  .heading5{
+    font-size: 32px;
+    font-weight: bold;  
+  }
+
+  .heading6{
+    font-size: 26px;
+    font-weight: bold;  
+  }
+
+  .swiper-pagination{
+    position: relative !important;
+    bottom: 0 !important;
+}
+
+.hero-banner{
+  background-image: url('/Assets/home/HeroBanner.webp');
+  background-size: cover;
+  background-position: center center;
+}
+
+.container{
+  overflow-x: hidden !important;
+}
+
+@keyframes fadeRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+.fade-right {
+  animation: fadeRight 0.5s ease-out;
 }
+
+@keyframes fadeIN {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.fade-in {
+  animation: fadeIN 0.5s ease-out;
+}
+
+
+@media screen and (max-width: 768px){
+    p{
+      font-size: 13px;
+    }
+
+    ul{
+      font-size: 13px;
+    }
+
+    li{
+      font-size: 13px;
+    }
+
+    .heading1{
+      font-size: 36px;
+      line-height: 38px;
+    }
+  
+    .heading2{
+      font-size: 30px;
+      line-height: 36px;
+    }
+    
+    .heading3{
+      font-size: 24px;
+      line-height: 28px;
+    }
+  
+    .heading4{
+      font-size: 20px;
+      line-height: 24px;  
+    }
+  
+
+    .heading5{
+      font-size: 18px;
+      font-weight: bold;  
+    }
+  
+    .heading6{
+      font-size: 15px;
+      font-weight: bold;  
+    }
+  
+  
+    .hero-banner{
+      background-image: url('/Assets/home/Charging-Stations-05.webp');
+      background-size: cover;
+      background-position: center center;
+    }
+  
+  }
